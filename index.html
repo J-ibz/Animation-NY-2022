@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script type='module' src='./index.js' defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="circle-container">
+        <div class="ruban">
+            <div>
+                <h2>Happy New Year</h2>
+            </div>
+            <div></div>
+            <div>
+                <h2>2023</h2>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        function bubbles () {
+            const container = document.querySelector('.circle-container')
+            for (let i = 0; i < 140; i++) {
+                let bubble = document.createElement('div')
+                bubble.classList.add('bubble')
+                let x = Math.floor(Math.random() * 400)       
+                let y = Math.floor(Math.random() * 400)
+                let bubbleSize = Math.random() * 10
+                bubble.style.animationDuration = 5 + bubbleSize + 's'
+                bubble.style.animationDelay = - bubbleSize + 's'
+                bubble.style.left = x + 'px';
+                bubble.style.top = y + 'px';
+                bubble.style.width = 1 + bubbleSize + 'px';
+                bubble.style.height = 1 + bubbleSize + 'px';
+
+                container.append(bubble)
+            }
+        }
+        bubbles ()
+    </script>
+</body>
+</html>
