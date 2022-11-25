@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <script type='module' src='./index.js' defer></script>
-    <title>Document</title>
+    <title>New Year Animation</title>
 </head>
 <body>
     <div class="circle-container">
@@ -24,14 +23,15 @@
     <script>
         function bubbles () {
             const container = document.querySelector('.circle-container')
+            const containerH = container.getBoundingClientRect().height;
+            const containerW = container.getBoundingClientRect().width;
             for (let i = 0; i < 140; i++) {
-                let bubble = document.createElement('div')
+                const bubble = document.createElement('div')
                 bubble.classList.add('bubble')
-                let x = Math.floor(Math.random() * 400)       
-                let y = Math.floor(Math.random() * 400)
-                let bubbleSize = Math.random() * 10
+                const x = Math.floor(Math.random() * containerW)       
+                const y = Math.floor(Math.random() * containerH)
+                const bubbleSize = Math.random() * 10
                 bubble.style.animationDuration = 5 + bubbleSize + 's'
-                bubble.style.animationDelay = - bubbleSize + 's'
                 bubble.style.left = x + 'px';
                 bubble.style.top = y + 'px';
                 bubble.style.width = 1 + bubbleSize + 'px';
