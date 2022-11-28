@@ -5,7 +5,7 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    background-color: black;
+    background-color: #fff;
 }
 
 :root {
@@ -31,7 +31,7 @@ body {
     align-items: center;
     border-radius: 50%;
     position: relative;
-    background: #CC231E;
+    background: #d4af5c;
     overflow: hidden;
 }
 
@@ -54,7 +54,7 @@ body {
         opacity: 1;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(2000%);
         opacity: 0;
     }
 }
@@ -108,7 +108,8 @@ body {
 .ruban div:nth-child(3):before,
 .ruban div:nth-child(5):before {
     /* background: linear-gradient(-160deg, #E2AC6B, #E0D2B4); */
-    background-color: #0F8A5F;
+    background-color: #CC231E;
+    /* background-color: #ff1111; */
     transform: scaleX(0);    
     border-radius: 4px;
 }
@@ -116,7 +117,7 @@ body {
 .ruban div:nth-child(4):before,
 .ruban div:nth-child(6):before {
     /* background: linear-gradient(-160deg, #E2AC6B, #E0D2B4); */
-    background-color: #0F8A5F;
+    background-color: #930e0a;
     transform: scaleX(0);
     border-radius: 4px;
 }
@@ -145,6 +146,7 @@ body {
     transform-origin: left;
     width: 60%;
     left: 0;
+    top: 2px;
 }
 
 @keyframes zigzag {
@@ -156,7 +158,7 @@ body {
     }
 }
 
-.ruban div:nth-child(1):after,
+/* .ruban div:nth-child(1):after,
 .ruban div:nth-child(3):after,
 .ruban div:nth-child(5):after {
     content: '';
@@ -182,9 +184,13 @@ body {
 .ruban div:nth-child(5):after {
     animation-delay: var(--duration4);
     transform-origin: right;
-}
+} */
 
-.ruban div h2 {
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin: 0;
     padding: 0;
@@ -192,7 +198,17 @@ body {
     opacity: 0;
     color: #fff;
     font-weight: inherit;
-    font-size: 26px;
+    font-size: 18px;
+}
+
+.brand {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2 span {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .ruban div:nth-child(1) h2 {
@@ -217,3 +233,18 @@ body {
     }
 }
 /*#endregion ruban*/
+
+/* .third, .fourth {
+    width: 84%;
+    margin-left: auto !important;
+}
+
+.fifth {
+    width: 70%;
+    margin-left: auto !important;
+}
+
+h2 span {
+    font-size: 24px;
+    font-weight: bold;
+} */

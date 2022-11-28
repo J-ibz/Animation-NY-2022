@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,37 @@
     <link rel="stylesheet" href="./styles.css">
     <title>New Year Animation</title>
 </head>
+
 <body>
     <div class="circle-container">
         <div class="ruban">
             <div class="first">
-                <h2>Merry Christmas</h2>
+                <h2 class="brand">Estech</h2>
             </div>
             <div class="second"></div>
             <div class="third">
-                <h2>&</h2>
+                <h2>Wish You an
+                    <span>Happy</span>
+                </h2>
             </div>
             <div class="fourth"></div>
             <div class="fifth">
-                <h2>Happy New Year</h2>
+                <h2>Happy New Year
+                    <span>2023</span>
+                </h2>
             </div>
             <div class="tail"></div>
         </div>
     </div>
     <script>
-        function bubbles () {
+        function bubbles() {
             const container = document.querySelector('.circle-container')
             const containerH = container.getBoundingClientRect().height;
             const containerW = container.getBoundingClientRect().width;
             for (let i = 0; i < 400; i++) {
                 const bubble = document.createElement('div')
                 bubble.classList.add('bubble')
-                const x = Math.floor(Math.random() * containerW)       
+                const x = Math.floor(Math.random() * containerW)
                 const y = Math.floor(Math.random() * containerH)
                 const bubbleSize = Math.random() * 10
                 bubble.style.animationDuration = 1 + bubbleSize + 's'
@@ -44,7 +50,8 @@
                 container.append(bubble)
             }
         }
-        bubbles ()
+        bubbles()
     </script>
 </body>
+
 </html>
