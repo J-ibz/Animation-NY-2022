@@ -10,14 +10,18 @@
 <body>
     <div class="circle-container">
         <div class="ruban">
-            <div>
+            <div class="first">
+                <h2>Merry Christmas</h2>
+            </div>
+            <div class="second"></div>
+            <div class="third">
+                <h2>&</h2>
+            </div>
+            <div class="fourth"></div>
+            <div class="fifth">
                 <h2>Happy New Year</h2>
             </div>
-            <div></div>
-            <div>
-                <h2>2023</h2>
-            </div>
-            <div></div>
+            <div class="tail"></div>
         </div>
     </div>
     <script>
@@ -25,17 +29,17 @@
             const container = document.querySelector('.circle-container')
             const containerH = container.getBoundingClientRect().height;
             const containerW = container.getBoundingClientRect().width;
-            for (let i = 0; i < 140; i++) {
+            for (let i = 0; i < 400; i++) {
                 const bubble = document.createElement('div')
                 bubble.classList.add('bubble')
                 const x = Math.floor(Math.random() * containerW)       
                 const y = Math.floor(Math.random() * containerH)
                 const bubbleSize = Math.random() * 10
-                bubble.style.animationDuration = 5 + bubbleSize + 's'
+                bubble.style.animationDuration = 1 + bubbleSize + 's'
                 bubble.style.left = x + 'px';
                 bubble.style.top = y + 'px';
-                bubble.style.width = 1 + bubbleSize + 'px';
-                bubble.style.height = 1 + bubbleSize + 'px';
+                bubble.style.width = 1 + bubbleSize * 0.5 + 'px';
+                bubble.style.height = 1 + bubbleSize * 0.5 + 'px';
 
                 container.append(bubble)
             }
